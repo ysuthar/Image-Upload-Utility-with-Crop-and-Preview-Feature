@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=yes">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.min.css">
+    <link rel="stylesheet" href="main.css">
+    <title>Image Uploader</title>
+</head>
+
+<body>
+    <div class="upload-pan">
+        <div id="mydiv"></div>
+
+        <div class="form-inline">
+            <label class="img-upload-label">
+                Upload Image:</label>
+            <input type="file" class="js-fileinput img-upload" accept="image/jpeg,image/png,image/gif">
+
+            <button type="button" class="btn btn-success" id="upload">Upload</button>
+        </div>
+
+        <div class="hidden allPreviews">
+            <div class="container" style="margin-bottom:20px;">
+                <div class="progress" style="width:800px;margin-left:100px;">
+                    <div class="progress-bar" style="width:0%"></div>
+                </div>
+            </div>
+
+            <div class="container-fluid img-thumbnail">
+                <div class="row">
+                    <div class="col-3">
+                        <small>755px X 450px</small>
+                        <div class="hover-div"> <button class="btn btn-info">Edit</button></div>
+                        <canvas id="myCanvas1" width="755px" height="450px"></canvas>
+                    </div>
+                    <div class="col-3">
+                        <small>365px X 450px</small>
+                        <div class="hover-div"> <button class="btn btn-info">Edit</button></div>
+                        <canvas id="myCanvas2" width="365px" height="450px"></canvas>
+                    </div>
+                    <div class="col-3">
+                        <small>365px X 212px</small>
+                        <div class="hover-div"> <button class="btn btn-info">Edit</button></div>
+                        <canvas id="myCanvas3" width="365px" height="212px"></canvas>
+                    </div>
+                    <div class="col-3">
+                        <small>380px X 380px</small>
+                        <div class="hover-div"> <button class="btn btn-info">Edit</button></div>
+                        <canvas id="myCanvas4" width="380px" height="380px"></canvas>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="edi-mode">
+        <canvas class="js-editorcanvas" style="margin:15px;"></canvas>
+        <div class="preview-window">
+            <h4>Preview Window</h4>
+            <small id="dimensions"></small>
+            <canvas class="js-previewcanvas" id="js-previewcanvas"></canvas>
+            <button class="btn btn-primary js-export img-export">SAVE</button>
+        </div>
+    </div>
+
+    <div class="result-table hidden">
+        <table class="table table-image">
+            <tr id="image-1">
+                <td class="w-25"> <img src="" alt="" class="img-fluid img-thumbnail"> </td>
+                <td>755px x 450px</td>
+                <td><a href=""></a></td>
+            </tr>
+            <tr id="image-2">
+                <td class="w-25"> <img src="" alt="" class="img-fluid img-thumbnail"> </td>
+                <td>365px x 450px</td>
+                <td><a href=""></a></td>
+            </tr>
+            <tr id="image-3">
+                <td class="w-25"> <img src="" alt="" class="img-fluid img-thumbnail"> </td>
+                <td>350px x 212px</td>
+                <td><a href=""></a></td>
+            </tr>
+            <tr id="image-4">
+                <td class="w-25"> <img src="" alt="" class="img-fluid img-thumbnail"> </td>
+                <td>380px x 380px</td>
+                <td><a href=""></a></td>
+            </tr>
+        </table>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="build/main.bundle.js"></script>
+</body>
+
+</html>
